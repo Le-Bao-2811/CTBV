@@ -1,0 +1,87 @@
+﻿@model IEnumerable<CongTyBaoVe.Web.ViewModels.ListNhanVien>
+
+@{
+    ViewData["Title"] = "Danh sách nhân viên";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Thêm chức vụ</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenNhanVien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NamSinh)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaChi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SDT)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrangThai)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ChucVu)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+		<tr>
+			<td>
+				@Html.DisplayFor(modelItem => item.Id)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.TenNhanVien)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.NamSinh)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.DiaChi)
+			</td>
+			<td>
+				@Html.DisplayFor(modelItem => item.SDT)
+			</td>
+			@if (item.TrangThai && item.ChucVu == "Nhân Viên Bảo Vệ")
+			{
+				<td>
+					Đang thực hiện nhiệm vụ
+				</td>
+			}
+			else if (item.TrangThai == false && item.ChucVu == "Nhân Viên Bảo Vệ")
+			{
+				<td>
+					Chưa có nhiệm vụ
+				</td>
+			}
+			else
+			{
+				<td>
+					Đang làm việc
+				</td>
+			}
+			<td>
+				@Html.DisplayFor(modelItem => item.ChucVu)
+			</td>
+			<td>
+				<a class="btn btn-warning">Xem</a>
+				<a asp-action="Edit" asp-controller="NhanVien" asp-route-id="@item.Id" class="btn btn-success">Sửa</a>
+				<a asp-action="Delete" asp-controller="NhanVien" asp-route-id="@item.Id" class="btn btn-danger">Xóa</a>
+			</td>
+		</tr>
+}
+    </tbody>
+</table>
