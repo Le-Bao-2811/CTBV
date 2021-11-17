@@ -25,19 +25,22 @@
 								<a class="nav-link text-dark" asp-area="" asp-controller="NhanVien" asp-action="Index">Nhân viên</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" asp-area="" asp-controller="ChucVu" asp-action="Index">Chức Vụ</a>
+								<a class="nav-link text-dark" asp-area="" asp-controller="ChucVu" asp-action="Index">Chức vụ</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Danh Sach Tài Khoản</a>
+								<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Danh sách tài khoản</a>
 							</li>
-							<li class="nav-item">
-								<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">Đăng Xuất</a>
+							<li class="nav-item float-right" style="padding-left:607px;">
+								<a class="nav-link text-dark">Xin chào @User.FindFirstValue(ClaimTypes.Name)</a>
+							</li>
+							<li style="border-left:solid" class="nav-item">
+								<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Logout">Đăng xuất</a>
 							</li>
 						}
 						else
 						{
 							<li class="nav-item">
-								<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">ĐăngNhập</a>
+								<a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Đăng Nhập</a>
 							</li>
 						}
 					</ul>
@@ -53,7 +56,7 @@
 
 	<footer class="border-top footer text-muted">
 		<div class="container">
-			&copy; 2021 - CongTyBaoVe.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+			&copy; 2021 - Công ty bảo vệ -
 		</div>
 	</footer>
 	<script src="~/lib/jquery/dist/jquery.min.js"></script>

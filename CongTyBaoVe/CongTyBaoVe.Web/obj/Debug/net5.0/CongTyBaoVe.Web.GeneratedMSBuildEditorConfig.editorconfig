@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = CongTyBaoVe.Web
-build_property.ProjectDir = D:\hoaibao\DuAN\CongTyBaoVe\CongTyBaoVe.Web\
+build_property.ProjectDir = D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\

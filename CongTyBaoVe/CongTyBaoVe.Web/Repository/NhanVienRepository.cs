@@ -44,7 +44,7 @@ namespace CongTyBaoVe.Web.Repository
 			data.TrangThai = model.TrangThai;
 			data.IdChucVu = model.IdChucVu;
 			data.DiaChi = model.DiaChi;
-			await db.nhanViens.AddAsync(data);
+			await db.AddAsync(data);
 			await this.Save();
 		}
 		public NhanVien Find(int id)

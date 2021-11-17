@@ -55,9 +55,15 @@ namespace CongTyBaoVe.Web.Repository
 						.AsNoTracking()
 						.SingleOrDefault(u => u.UserName == model.UserName);
 		}
-		public async Task<List<User>> ToList()
+		public async Task<List<User>> ToList(int data)
 		{
-			return await db.users.ToListAsync();
+			return await db.users.Where(x=>x.Id!=data)
+				.ToListAsync();
+		}
+		public void Delete(int id)
+		{
+			db.users.Remove(db.users.Find(id));
+			db.SaveChanges();
 		}
 	}
 }

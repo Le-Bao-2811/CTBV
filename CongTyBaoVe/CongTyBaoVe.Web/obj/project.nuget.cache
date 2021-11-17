@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FoQjbhm6e3q7056cd4DZkat+eDk4YqGrvb7yrNgt0vDErlFhZLpRq8Uhememla6Qi7N6o82+a1Yz85FETGLgTA==",
+  "dgSpecHash": "1ISzUzRIIEG/9diJgswbYh5+pD1v9QiENfg7/bC3vWX8WCkkfl8BZdsogkfiakprzoGfhOXFJ+/B78LXXhsLMw==",
   "success": true,
-  "projectFilePath": "D:\\hoaibao\\DuAN\\CongTyBaoVe\\CongTyBaoVe.Web\\CongTyBaoVe.Web.csproj",
+  "projectFilePath": "D:\\hoaibao\\DuAN\\CTBV\\CongTyBaoVe\\CongTyBaoVe.Web\\CongTyBaoVe.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ASUS\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\jetbrains.annotations\\2021.1.0\\jetbrains.annotations.2021.1.0.nupkg.sha512",

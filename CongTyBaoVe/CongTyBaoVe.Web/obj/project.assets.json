@@ -7211,11 +7211,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\hoaibao\\DuAN\\CongTyBaoVe\\CongTyBaoVe.Web\\CongTyBaoVe.Web.csproj",
+      "projectUniqueName": "D:\\hoaibao\\DuAN\\CTBV\\CongTyBaoVe\\CongTyBaoVe.Web\\CongTyBaoVe.Web.csproj",
       "projectName": "CongTyBaoVe.Web",
-      "projectPath": "D:\\hoaibao\\DuAN\\CongTyBaoVe\\CongTyBaoVe.Web\\CongTyBaoVe.Web.csproj",
+      "projectPath": "D:\\hoaibao\\DuAN\\CTBV\\CongTyBaoVe\\CongTyBaoVe.Web\\CongTyBaoVe.Web.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "D:\\hoaibao\\DuAN\\CongTyBaoVe\\CongTyBaoVe.Web\\obj\\",
+      "outputPath": "D:\\hoaibao\\DuAN\\CTBV\\CongTyBaoVe\\CongTyBaoVe.Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

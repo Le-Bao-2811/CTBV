@@ -24,7 +24,9 @@ namespace CongTyBaoVe.Web.Controllers
 		[Authorize]
 		public async Task<IActionResult> Index()
 		{
-			return View( await repository.ToList());
+			var id = User.FindFirst(ClaimTypes.NameIdentifier);
+			var data = Convert.ToInt32(id.Value);
+			return View( await repository.ToList(data));
 		}
 		public IActionResult SingUp() => View();
 		[HttpPost]
@@ -32,7 +34,7 @@ namespace CongTyBaoVe.Web.Controllers
 		{
 			await repository.SignUp(userVM);
 			await repository.Save();
-			return RedirectToAction("Index","Home");
+			return RedirectToAction("Index","User");
 		}
 		public IActionResult Login() => View();
 		[HttpPost]
@@ -65,7 +67,7 @@ namespace CongTyBaoVe.Web.Controllers
 							IsPersistent = model.Remeber
 						};
 						await HttpContext.SignInAsync("Cookies", principal, authenPropeties);
-						return RedirectToAction("Index", "NhanVien");
+						return RedirectToAction("Index", "Home");
 					}
 					else
 					{
@@ -83,6 +85,11 @@ namespace CongTyBaoVe.Web.Controllers
 		{
 			await HttpContext.SignOutAsync("Cookies");
 			return RedirectToAction("Index","Home");
-		}		
+		}	
+		public IActionResult Delete(int id)
+		{
+			repository.Delete(id);
+			return RedirectToAction("Index", "User");
+		}
 	}
 }

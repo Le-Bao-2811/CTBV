@@ -47,7 +47,10 @@
 				<td>
 					Member
 				</td>
-			}		
+			}
+			<td>
+				<a class="btn btn-danger" onclick="return confirm('Xác nhận xóa tài khoản');" asp-action="Delete" asp-controller="User" asp-route-id="@item.Id">Xóa</a>
+			</td>
 		</tr>
 }
     </tbody>
