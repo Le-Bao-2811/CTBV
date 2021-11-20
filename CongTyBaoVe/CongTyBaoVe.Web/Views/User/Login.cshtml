@@ -1,41 +1,46 @@
 ﻿@model CongTyBaoVe.Web.ViewModels.LoginVM
 
 @{
-    ViewData["Title"] = "Login";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Login";
 }
 
-
-<div class="row justify-content-center">
-	<div class="col-md-4">
-		<h1>Đăng nhập</h1>
-		<form asp-action="Login">
-			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-			<div class="form-group">
-				<label asp-for="UserName" class="control-label"></label>
-				<input asp-for="UserName" class="form-control" />
-				<span asp-validation-for="UserName" class="text-danger"></span>
-			</div>
-			<div class="form-group">
-				<label asp-for="Password" class="control-label"></label>
-				<input asp-for="Password" class="form-control" />
-				<span asp-validation-for="Password" class="text-danger"></span>
-			</div>
-			<div class="form-group form-check">
-				<label class="form-check-label">
-					Lưu đăng nhập
-					<input class="form-check-input" asp-for="Remeber" />
-				</label>
-			</div>
-			<div class="form-group">
-				<input type="submit" value="Đăng nhập" class="btn btn-primary" />
-			</div>
-		</form>
-		<div>
-			<a asp-action="Index" asp-controller="Home">Trở về</a>
+<link href="~/css/style.css" rel="stylesheet"  asp-append-version="true"/>
+<section>
+	<div class="img-bg">
+		<img src="https://salt.tikicdn.com/ts/product/aa/74/ca/0431461e7b027fb314a1b35496a0f1f8.jpg"
+			 alt="Hình Ảnh Minh Họa">
+	</div>
+	<div class="noi-dung">
+		<div class="form">
+			<h2>Đăng nhập</h2>
+			<form asp-action="Login">
+				<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+				<div class="input-form">
+					<label asp-for="UserName" class="control-label"></label>
+					<input asp-for="UserName" class="form-control" />
+					<span asp-validation-for="UserName" class="text-danger"></span>
+				</div>
+				<div class="input-form">
+					<label asp-for="Password" class="control-label"></label>
+					<input asp-for="Password" class="form-control" />
+					<span asp-validation-for="Password" class="text-danger"></span>
+				</div>
+				<div class="nho-dang-nhap">
+					<label class="form-check-label">
+						<input class="form-check-input" asp-for="Remeber" />
+						<span>Nhớ mật khẩu</span>
+					</label>
+				</div>
+				<div class="input-form">
+					<input type="submit" value="Đăng Nhập">
+				</div>
+				<div class="input-form">
+					<p>Bạn Chưa Có Tài Khoản? <a href="#">Đăng Ký</a></p>
+				</div>
+			</form>
 		</div>
 	</div>
-</div>
+</section>
 
 
 
