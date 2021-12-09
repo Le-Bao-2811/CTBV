@@ -14,9 +14,11 @@ namespace CongTyBaoVe.Web.Entites
 		[Key]
 		public int Id{ get; set; }
 		[DisplayName("Tài khoản")]
+		
 		public string UserName { get; set; }
 		[DisplayName("Mật khẩu")]
 		[DataType(DataType.Password)]
+		
 		public string PasswordHash { get; set; }
 		[DisplayName("Quyền")]
 		public bool IsAdmin { get; set; }

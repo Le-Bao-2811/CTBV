@@ -1,29 +1,25 @@
 ﻿@model CongTyBaoVe.Web.ViewModels.UserVM
 
-@{
-    ViewData["Title"] = "SingUp";
-    
-}
+
 
 
 <div class="row">
 	<div class="col-md-10">
-		<h1>Tạo tài khoản</h1>
 		<form asp-action="SingUp" id="form-signup">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<div class="form-group">
-				<label asp-for="UserName" class="control-label"></label>
-				<input asp-for="UserName" class="form-control" />
+				<label asp-for="UserName" class="control-label label"></label>
+				<input asp-for="UserName" value="" class="form-control input" />
 				<span asp-validation-for="UserName" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<label asp-for="Password" class="control-label"></label>
-				<input asp-for="Password" class="form-control" />
+				<label asp-for="Password" class="control-label label"></label>
+				<input asp-for="Password" value="" class="form-control input" />
 				<span asp-validation-for="Password" class="text-danger"></span>
 			</div>
 			<div class="form-group">
-				<label asp-for="ComfimlPassword" class="control-label"></label>
-				<input asp-for="ComfimlPassword" class="form-control" />
+				<label asp-for="ComfimlPassword" class="control-label label"></label>
+				<input asp-for="ComfimlPassword" value="" class="form-control input" />
 				<span asp-validation-for="ComfimlPassword" class="text-danger"></span>
 			</div>
 			<div class="form-group form-check">
@@ -32,9 +28,8 @@
 					<input class="form-check-input" asp-for="IsAdmin" />
 				</label>
 			</div>
-			
-		</form>
-	
+		
+		</form>	
 	</div>
 </div>
 

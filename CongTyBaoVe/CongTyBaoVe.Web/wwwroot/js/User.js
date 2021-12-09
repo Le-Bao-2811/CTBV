@@ -1,16 +1,42 @@
 ﻿window.addEventListener("load", () => {
 	calldata()
+	
 	$(document).on("click", ".add", () => {
-		var data = $("#form-signup").serialize();
-		$.post("/user/singup", data, (data, textstatus, jqXHR) => {
-			if (data != null) {
-				alert("Tạo tài khoản thành công")
-				calldata();
-			}
-			else {
-				alert("tạo tài khoản thất bại")
+		var check=true
+		var input = document.querySelectorAll(".input")
+		var label = document.querySelectorAll(".label")		
+		for (let i = 0; i < input.length; i++) {
+			if (input[i].value == "") {
+				var data = label[i].innerHTML;
+				alert("Dòng " + data + " không được để trống ")
+				check = false;
+			}			
+		}
+		if (input[1].value != input[2].value) {
+			alert("Nhập lại mật khẩu không trùng khớp")
+			check = false
+		}
+		$.get("/user/show", (ev) => {
+			for (let i = 0; i < ev.length; i++) {
+				if ((ev[i].userName) == input[0].value) {
+					alert("Tài khoản đã tồn tại");
+					check = false
+                }
             }
-		})
+        })
+		if (check == true) {
+			var data = $("#form-signup").serialize();
+			$.post("/user/singup", data, (data, textstatus, jqXHR) => {
+				if (data != null) {
+					alert("Tạo tài khoản thành công")
+					calldata();
+				}
+				else {
+				alert("tạo tài khoản thất bại")
+				}
+			})
+        }
+		
 	})
 	$(document).on("click", ".js-delete", (ev) => {
 		var id = ev.currentTarget.getAttribute("data-id")
