@@ -1,21 +1,19 @@
 ﻿@model CongTyBaoVe.Web.ViewModels.AddEditNhanVIenVM
 
 @{
-    ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Sửa Nhân Viên";
+   
 }
 
-<h1>Edit</h1>
+<h1>@ViewData["Title"]</h1>
 
-<h4>AddEditNhanVIenVM</h4>
-<hr />
 <div class="row">
-    <div class="col-md-4">
-		<form asp-action="Edit">
+    <div class="col-md-10">
+		<form asp-action="Edit" data-ajax="true" id="form-update">
 			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
 			<div class="form-group">
 				<label asp-for="Id" class="control-label"></label>
-				<input asp-for="Id" class="form-control" />
+				<input asp-for="Id" class="form-control" readonly />
 				<span asp-validation-for="Id" class="text-danger"></span>
 			</div>
 			<div class="form-group">
@@ -39,30 +37,19 @@
 				<span asp-validation-for="SDT" class="text-danger"></span>
 			</div>
 
-			<div class="form-group">
-				<label asp-for="duongdan" class="control-label"></label>
-				<input asp-for="duongdan" class="form-control" />
-				<span asp-validation-for="duongdan" class="text-danger"></span>
-			</div>
-			<div class="form-group">
-				<label asp-for="IdChucVu" class="control-label"></label>
-				<input asp-for="IdChucVu" class="form-control" />
-				<span asp-validation-for="IdChucVu" class="text-danger"></span>
-			</div>
+			<label asp-for="IdChucVu" class="control-label"></label>
+			<select asp-for="IdChucVu" class="form-control">
+				<vc:list-chuc-vu seleteted-id="@Model?.IdChucVu"></vc:list-chuc-vu>
+			</select>
+			<span asp-validation-for="IdChucVu" class="text-danger"></span>
 			<div class="form-group form-check">
 				<label class="form-check-label">
-					Trạng thái làm việc (Chỉ dùng với nhân viên bảo vệ)
+					<span>Trạng thái làm việc (Chỉ dùng với nhân viên bảo vệ)</span>					
 					<input class="form-check-input" asp-for="TrangThai" />
 				</label>
-			</div>
-			<div class="form-group">
-				<input type="submit" value="Save" class="btn btn-primary" />
-			</div>
+			</div>			
 		</form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 

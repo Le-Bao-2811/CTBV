@@ -285,7 +285,6 @@ D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.We
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.Web.RazorAssemblyInfo.cache
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.Web.RazorAssemblyInfo.cs
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\staticwebassets\CongTyBaoVe.Web.StaticWebAssets.Manifest.cache
-D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\staticwebassets\CongTyBaoVe.Web.StaticWebAssets.xml
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\scopedcss\bundle\CongTyBaoVe.Web.styles.css
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.Web.TagHelpers.input.cache
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.Web.TagHelpers.output.cache
@@ -295,9 +294,7 @@ D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\Ch
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\ChucVu\Index.cshtml.g.cs
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
-D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\NhanVien\Create.cshtml.g.cs
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\NhanVien\Edit.cshtml.g.cs
-D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\NhanVien\Index.cshtml.g.cs
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -314,3 +311,6 @@ D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.We
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\ref\CongTyBaoVe.Web.dll
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.Web.pdb
 D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\CongTyBaoVe.Web.genruntimeconfig.cache
+D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\NhanVien\Create.cshtml.g.cs
+D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\NhanVien\Index.cshtml.g.cs
+D:\hoaibao\DuAN\CTBV\CongTyBaoVe\CongTyBaoVe.Web\obj\Debug\net5.0\Razor\Views\Shared\Components\ListChucVu\Default.cshtml.g.cs

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1ISzUzRIIEG/9diJgswbYh5+pD1v9QiENfg7/bC3vWX8WCkkfl8BZdsogkfiakprzoGfhOXFJ+/B78LXXhsLMw==",
+  "dgSpecHash": "hjZg5jzfZU0z9vbfKY4RPOmmPwTLSYCYzFc1dB0ZDn9z20gwZ/G+TKk6UblPmEb9w+nDwANvenAY7cdBIn/oJw==",
   "success": true,
   "projectFilePath": "D:\\hoaibao\\DuAN\\CTBV\\CongTyBaoVe\\CongTyBaoVe.Web\\CongTyBaoVe.Web.csproj",
   "expectedPackageFiles": [
@@ -129,7 +129,8 @@
     "C:\\Users\\ASUS\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\ASUS\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\ASUS\\.nuget\\packages\\x.pagedlist\\8.1.0\\x.pagedlist.8.1.0.nupkg.sha512"
+    "C:\\Users\\ASUS\\.nuget\\packages\\x.pagedlist\\8.1.0\\x.pagedlist.8.1.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
   "logs": []
 }

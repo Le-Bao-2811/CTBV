@@ -22,21 +22,24 @@ namespace CongTyBaoVe.Web.Controllers
 			repository = _repository;
 		}
 		[Authorize]
-		public async Task<IActionResult> Index()
+		public IActionResult Index()
+        {
+			return View();
+        }
+		public async Task<IActionResult> Show()
 		{
 			var id = User.FindFirst(ClaimTypes.NameIdentifier);
 			var data = Convert.ToInt32(id.Value);
-			return View( await repository.ToList(data));
-		}
-		public IActionResult SingUp() => View();
+			var listdata = await repository.ToList(data);
+			return new JsonResult(listdata);
+		}		
 		[HttpPost]
 		public async Task<IActionResult> SingUp(UserVM userVM)
 		{
 			await repository.SignUp(userVM);
 			await repository.Save();
-			return RedirectToAction("Index","User");
+			return Ok();
 		}
-		public IActionResult Login() => View();
 		[HttpPost]
 		public async Task<IActionResult> Login(LoginVM model)
 		{

@@ -1,57 +1,62 @@
-﻿@model IEnumerable<CongTyBaoVe.Web.Entites.User>
+﻿
 
 @{
-    ViewData["Title"] = "Danh sách tài khoản";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Danh sách tài khoản";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p>
-    <a asp-action="SingUp" asp-controller="User" class="btn btn-primary">Tạo tài khoản mới</a>
-</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalCreate">
+	Thêm tài khoản
+</button>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UserName)
-            </th>
-           
-            <th>
-                @Html.DisplayNameFor(model => model.IsAdmin)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
+	<thead>
 		<tr>
-			<td>
-				@Html.DisplayFor(modelItem => item.Id)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.UserName)
-			</td>			
-
-			@if (item.IsAdmin)
-			{
-				<td>
-					Admin
-				</td> 
-			}
-			else
-			{
-				<td>
-					Member
-				</td>
-			}
-			<td>
-				<a class="btn btn-danger" onclick="return confirm('Xác nhận xóa tài khoản');" asp-action="Delete" asp-controller="User" asp-route-id="@item.Id">Xóa</a>
-			</td>
+			<th>
+				Id
+			</th>
+			<th>
+				Tên tài Khoản
+			</th>
+			<th>
+				Quyền
+			</th>
+			<th></th>
 		</tr>
-}
-    </tbody>
+	</thead>
+	<tbody id="tbody">
+	</tbody>
 </table>
+
+<!-- The Modal Thêm -->
+<div class="modal" id="myModalCreate">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Thêm nhân viên</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<partial name="SingUp" />
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-primary add" data-bs-dismiss="modal">Thêm</button>
+				<button type="button" class="btn btn-group-lg" data-bs-dismiss="modal">Thoát</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/lib/jquery-ajaxy/scripts/jquery.ajaxy.js"></script>
+	<script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+	<script src="~/js/User.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,13 @@
+﻿@model IEnumerable<CongTyBaoVe.Web.Entites.ChucVu>
+@{
+	int? selectedId = (int?)ViewBag.SelectedId;
+}
+@foreach(var item in Model)
+            {
+                if (selectedId.HasValue && selectedId.Value == item.Id)
+                {
+                    <option value="@item.Id" selected>@item.ChucVuNhanVien</option>
+                }
+                <option value="@item.Id">@item.ChucVuNhanVien</option>
+            }
+

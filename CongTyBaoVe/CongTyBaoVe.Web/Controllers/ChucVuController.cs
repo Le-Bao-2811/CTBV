@@ -16,13 +16,16 @@ namespace CongTyBaoVe.Web.Controllers
 		public ChucVuController(ChucVuRepository _repo)
 		{
 			repository = _repo;
-		}	
-		public async Task<IActionResult> Index()
+		}
+		public IActionResult Index()
+        {
+			return View();
+        }
+		public async Task<IActionResult> Show()
 		{
 			var data = await repository.ToList();
-			return View(data);
-		}
-		public IActionResult Create() => View();
+			return new JsonResult(data);
+		}		
 		[HttpPost]
 		public async Task<IActionResult>Create(AddEditChucVuVM model)
 		{

@@ -1,41 +1,85 @@
-﻿@model IEnumerable<CongTyBaoVe.Web.Entites.ChucVu>
+﻿
 
 @{
-    ViewData["Title"] = "Danh Sách Chức Vụ";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Danh Sách Chức Vụ";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Thêm chức vụ</a>
-</p>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModalCreate">
+	Thêm chức vụ
+</button>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ChucVuNhanVien)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ChucVuNhanVien)
-            </td>
-			<td>				
-				<a asp-action="Edit" asp-controller="ChucVu" asp-route-id="@item.Id" class="btn btn-success">Sửa</a>
-				<a  asp-action="Delete" onclick="return confirm('Xác nhận xóa chức vụ này');" asp-controller="ChucVu" asp-route-id="@item.Id" class="btn btn-danger">Xóa</a>
-			</td>
-        </tr>
-}
-    </tbody>
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Chức vụ
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody id="tbody">
+	</tbody>
 </table>
+
+<!-- The Modal Thêm -->
+<div class="modal" id="myModalCreate">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Thêm nhân viên</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<partial name="Create" />
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-primary add" data-bs-dismiss="modal">Thêm</button>
+				<button type="button" class="btn btn-group-lg" data-bs-dismiss="modal">Thoát</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<!-- The Modal Sửa -->
+<div class="modal" id="myModalUpdate">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Thêm nhân viên</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body" id="update">
+
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-primary btnEdit" data-bs-dismiss="modal">Thêm</button>
+				<button type="button" class="btn btn-group-lg" data-bs-dismiss="modal">Thoát</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+@section Scripts{
+	<script src="~/lib/jquery-ajaxy/scripts/jquery.ajaxy.js"></script>
+	<script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+	<script src="~/js/ChucVu.js" asp-append-version="true"></script>
+}

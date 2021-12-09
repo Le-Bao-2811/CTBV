@@ -1,87 +1,100 @@
-﻿@model IEnumerable<CongTyBaoVe.Web.ViewModels.ListNhanVien>
-
-@{
-    ViewData["Title"] = "Danh sách nhân viên";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{
+	ViewData["Title"] = "Danh sách nhân viên";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Thêm Nhân viên</a>
-</p>
+<button type="button" class="btn btn-primary them" data-bs-toggle="modal" data-bs-target="#myModalCreate">
+	Thêm nhân viên
+</button>
 <table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TenNhanVien)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NamSinh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DiaChi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.SDT)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TrangThai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ChucVu)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
+	<thead>
 		<tr>
-			<td>
-				@Html.DisplayFor(modelItem => item.Id)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.TenNhanVien)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.NamSinh)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.DiaChi)
-			</td>
-			<td>
-				@Html.DisplayFor(modelItem => item.SDT)
-			</td>
-			@if (item.TrangThai && item.ChucVu == "Nhân Viên Bảo Vệ")
-			{
-				<td>
-					Đang thực hiện nhiệm vụ
-				</td>
-			}
-			else if (item.TrangThai == false && item.ChucVu == "Nhân Viên Bảo Vệ")
-			{
-				<td>
-					Chưa có nhiệm vụ
-				</td>
-			}
-			else
-			{
-				<td>
-					Đang làm việc
-				</td>
-			}
-			<td>
-				@Html.DisplayFor(modelItem => item.ChucVu)
-			</td>
-			<td>
-				<a class="btn btn-warning">Xem</a>
-				<a asp-action="Edit" asp-controller="NhanVien" asp-route-id="@item.Id" class="btn btn-success">Sửa</a>
-				<a asp-action="Delete" asp-controller="NhanVien" onclick="return confirm('Xác nhận xóa nhân viên này');" asp-route-id="@item.Id" class="btn btn-danger">Xóa</a>
-			</td>
+			<th>
+				Id
+			</th>
+			<th>
+				Tên Nhân viên
+			</th>
+			<th>
+				Năm sinh
+			</th>
+			<th>
+				Địa chỉ
+			</th>
+			<th>
+				Số điện thoại
+			</th>
+			<th>
+				Chức vụ
+			</th>
+			<th>
+				Trạng thái
+			</th>
+			<th></th>
 		</tr>
-}
-    </tbody>
+	</thead>
+	<tbody id="body">
+		
+	</tbody>
 </table>
+<!-- The Modal Thêm -->
+<div class="modal" id="myModalCreate">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Thêm nhân viên</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body">
+				<partial name="Create" />
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-primary add" data-bs-dismiss="modal">Thêm</button>
+				<button type="button" class="btn btn-group-lg" data-bs-dismiss="modal">Thoát</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- The Modal Sửa -->
+<div class="modal" id="myModalUpdate">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<h4 class="modal-title">Thêm nhân viên</h4>
+				<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+			</div>
+
+			<!-- Modal body -->
+			<div class="modal-body" id="update">
+				
+			</div>
+
+			<!-- Modal footer -->
+			<div class="modal-footer">
+				<button type="button" class="btn btn-outline-primary btnEdit" data-bs-dismiss="modal">Thêm</button>
+				<button type="button" class="btn btn-group-lg" data-bs-dismiss="modal">Thoát</button>
+			</div>
+
+		</div>
+	</div>
+</div>
+@section Scripts{
+	<script src="~/lib/jquery-ajaxy/scripts/jquery.ajaxy.js"></script>
+	<script src="~/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+	<script src="~/js/NhanVien.js" asp-append-version="true"></script>
+
+}
+
+

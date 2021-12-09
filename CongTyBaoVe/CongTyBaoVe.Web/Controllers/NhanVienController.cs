@@ -21,22 +21,18 @@ namespace CongTyBaoVe.Web.Controllers
 			repository = _repository;
 			chucVuRepository = _chucvu;
 		}
-		public IActionResult Index()
+		public IActionResult Index() => View();
+		public IActionResult show()
 		{
 			var data = repository.ToList();
-			return View(data);
-		}
-		public async Task<IActionResult> Create() 
-		{
-			var data = await chucVuRepository.ToList();
-			ViewBag.ChucVu = new SelectList(data, "Id", "ChucVuNhanVien");
-			return View();
-		}  
+			return new JsonResult(data);
+		}	
+		
 		[HttpPost]
 		public async Task<IActionResult> Create(AddEditNhanVIenVM model)
 		{
 			await repository.AddNhanVien(model);
-			return RedirectToAction("Index", "NhanVien");
+			return Ok();
 		}
 		public IActionResult Edit(int id)
 		{
@@ -48,11 +44,11 @@ namespace CongTyBaoVe.Web.Controllers
 			data.SDT = model.SDT;
 			data.TrangThai = model.TrangThai;
 			data.IdChucVu = model.IdChucVu;
-			data.DiaChi = model.DiaChi;
+			data.DiaChi = model.DiaChi;			
 			return PartialView(data);
 		}
 		[HttpPost]
-		public async Task<IActionResult> Edit(AddEditNhanVIenVM model)
+		public async Task<IActionResult> update(AddEditNhanVIenVM model)
 		{			
 			await repository.EditNhanVien(model);
 			return RedirectToAction("Index", "NhanVien");

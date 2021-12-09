@@ -34,7 +34,7 @@ using System.Security.Claims;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"41897c4a29b2ee97629787c2f1e3f4b7a028c1ca", @"/Views/User/Login.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"e309c821806c4b8f356a6ff8fa3c7a140038c324", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7d6ad2592231f51656b1908417e0c16c87596bb2", @"/Views/_ViewImports.cshtml")]
     public class Views_User_Login : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<CongTyBaoVe.Web.ViewModels.LoginVM>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("href", "~/css/style.css", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
