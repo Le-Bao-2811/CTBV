@@ -20,7 +20,7 @@ namespace CongTyBaoVe.Web
 			Host.CreateDefaultBuilder(args)
 				.ConfigureWebHostDefaults(webBuilder =>
 				{
-					webBuilder.UseStartup<Startup>();
+					webBuilder.UseStartup<Startup>().UseUrls("http://hoaibao.coderoom.info:8888");
 				});
 	}
 }

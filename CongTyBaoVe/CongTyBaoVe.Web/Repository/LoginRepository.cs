@@ -65,5 +65,10 @@ namespace CongTyBaoVe.Web.Repository
 			db.users.Remove(db.users.Find(id));
 			db.SaveChanges();
 		}
+		public async Task<bool> CheckUsername(string username)
+        {
+			var isUser = await db.users.AnyAsync(x => x.UserName == username);
+			return isUser;
+        }
 	}
 }

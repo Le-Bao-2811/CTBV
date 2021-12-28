@@ -26,13 +26,20 @@ namespace CongTyBaoVe.Web.Controllers
         {
 			return View();
         }
+		[HttpPost]
+		public async Task<IActionResult> CheckUser(string username)
+        {
+			var isUser = await repository.CheckUsername(username);
+			return Ok(isUser);
+        }
 		public async Task<IActionResult> Show()
 		{
 			var id = User.FindFirst(ClaimTypes.NameIdentifier);
 			var data = Convert.ToInt32(id.Value);
 			var listdata = await repository.ToList(data);
 			return new JsonResult(listdata);
-		}		
+		}
+		
 		[HttpPost]
 		public async Task<IActionResult> SingUp(UserVM userVM)
 		{
@@ -40,6 +47,7 @@ namespace CongTyBaoVe.Web.Controllers
 			await repository.Save();
 			return Ok();
 		}
+		public IActionResult Login() => View();
 		[HttpPost]
 		public async Task<IActionResult> Login(LoginVM model)
 		{

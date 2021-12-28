@@ -24,7 +24,7 @@ namespace CongTyBaoVe.Web.Repository
 			{
 				Id = model.Id,
 				TenNhanVien = model.TenNhanVien,
-				NamSinh = model.NamSinh,
+				NamSinh = model.NamSinh.Date.ToString("dd/MM/yyyy"),
 				SDT = model.SDT,
 				TrangThai = model.TrangThai,
 				DiaChi = model.DiaChi,
@@ -44,6 +44,7 @@ namespace CongTyBaoVe.Web.Repository
 			data.TrangThai = model.TrangThai;
 			data.IdChucVu = model.IdChucVu;
 			data.DiaChi = model.DiaChi;
+			data.NamSinh.Date.ToString("dd/MM/yy");
 			await db.AddAsync(data);
 			await this.Save();
 		}

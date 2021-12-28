@@ -12,7 +12,7 @@ namespace CongTyBaoVe.Web.ViewModels
 		[DisplayName("Tên nhân viên")]
 		public string TenNhanVien { get; set; }
 		[DisplayName("Năm sinh")]
-		public DateTime NamSinh { get; set; }
+		public string NamSinh { get; set; }
 		[DisplayName("Địa chỉ")]
 		public string DiaChi { get; set; }
 		[DisplayName("Số điện thoại")]

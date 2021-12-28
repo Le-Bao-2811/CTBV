@@ -18,8 +18,8 @@ namespace CongTyBaoVe.Web.Entites
 		public string UserName { get; set; }
 		[DisplayName("Mật khẩu")]
 		[DataType(DataType.Password)]
-		
 		public string PasswordHash { get; set; }
+		public string PasswordSait { get; set; }
 		[DisplayName("Quyền")]
 		public bool IsAdmin { get; set; }
 	}
